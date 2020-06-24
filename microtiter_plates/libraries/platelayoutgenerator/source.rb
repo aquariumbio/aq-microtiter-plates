@@ -72,21 +72,21 @@ class PlateLayoutGenerator
     @layout.index { |x| x[1] == column }
   end
 
-  def cdc_sample_layout
-    lyt = []
-    [0, 4].each do |j|
-      cols = Array.new(12) { |c| c }
-      cols.each { |c| @group_size.times { |i| lyt << [i + j, c] } }
-    end
-    lyt
-  end
+  # def cdc_sample_layout
+  #   lyt = []
+  #   [0, 4].each do |j|
+  #     cols = Array.new(12) { |c| c }
+  #     cols.each { |c| @group_size.times { |i| lyt << [i + j, c] } }
+  #   end
+  #   lyt
+  # end
 
-  # @todo make this responsive to @group_size
-  def cdc_primer_layout
-    lyt = []
-    3.times { |i| [0, 4].each { |j| 12.times { |k| lyt << [i + j, k] } } }
-    lyt
-  end
+  # # @todo make this responsive to @group_size
+  # def cdc_primer_layout
+  #   lyt = []
+  #   3.times { |i| [0, 4].each { |j| 12.times { |k| lyt << [i + j, k] } } }
+  #   lyt
+  # end
 
   def sample_layout
     lyt = []
